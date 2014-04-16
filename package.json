@@ -1,0 +1,25 @@
+{
+  "name": "great-router",
+  "version": "0.0.1",
+  "description": "The Great Router",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/greatcodeclub/great-router.git"
+  },
+  "keywords": [
+    "framework",
+    "web",
+    "router"
+  ],
+  "author": "The Great Code Club",
+  "bugs": {
+    "url": "https://github.com/greatcodeclub/great-router/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.x",
+    "nodemon": "1.x"
+  }
+}
