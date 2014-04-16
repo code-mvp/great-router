@@ -2,6 +2,7 @@
   "name": "great-router",
   "version": "0.0.1",
   "description": "The Great Router",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "make test"
   },
@@ -21,5 +22,9 @@
   "devDependencies": {
     "mocha": "1.x",
     "nodemon": "1.x"
+  },
+  "dependencies": {
+    "underscore": "^1.6.0",
+    "methods": "^0.1.0"
   }
 }
