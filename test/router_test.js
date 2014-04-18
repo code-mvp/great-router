@@ -22,4 +22,14 @@ describe('Router', function() {
     router.handle({ method: 'GET', path: '/users/login' }, {}, function() {});
     assert.equal(called, 'login');
   });
+
+  xit('call route with param', function() {
+    var router = greatRouter(),
+        params;
+
+    router.get('/users/:id', function(req) { params = req.params });
+
+    router.handle({ method: 'GET', path: '/users/10' }, {}, function() {});
+    assert.equal(params.id, '10');
+  });
 });
