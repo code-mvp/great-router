@@ -23,7 +23,7 @@ describe('Router', function() {
     assert.equal(called, 'login');
   });
 
-  xit('call route with param', function() {
+  it('call route with param', function() {
     var router = greatRouter(),
         params;
 
