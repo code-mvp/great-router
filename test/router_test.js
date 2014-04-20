@@ -27,8 +27,13 @@ describe('Router', function() {
     var router = greatRouter(),
         params;
 
+    router.get('/users/:id', function(req) { params = req.params });
     router.get('/users/:id/:page/end', function(req) { params = req.params });
     
+    router.handle({ method: 'GET', path: '/users/10' }, {}, function() {});
+
+    assert.equal(params.id, '10');
+
     router.handle({ method: 'GET', path: '/users/10/1/end' }, {}, function() {});
 
     assert.equal(params.id, '10');
