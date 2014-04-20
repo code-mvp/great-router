@@ -39,4 +39,16 @@ describe('Router', function() {
     assert.equal(params.id, '10');
     assert.equal(params.page, '1');
   });
+
+  it('call global route and passthrough', function() {
+    var router = greatRouter(),
+        track = '';
+
+    router.get('/users/*', function(req) { track += 'called *, ' });
+    router.get('/users/:id', function(req) { track += 'called user with id: ' + req.params.id });
+
+    router.handle({ method: 'GET', path: '/users/1' }, {}, function() {});
+
+    assert.equal(track, 'called *, called user with id: 1')
+  })
 });
